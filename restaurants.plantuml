@@ -1,0 +1,37 @@
+@startuml
+
+class Restaurant{
+    name STRING
+    image STRING
+    menus ARRAY<Menu>
+    addMenu() VOID
+    getMenus() ARRAY<Menu>
+}
+class Menu{
+    name STRING
+    description STRING
+    items ARRAY<Item>
+    addItem() VOID
+    getItems() ARRAY<Item>
+}
+
+class Item{
+    name STRING
+    allergens STRING
+    description STRING
+    price FLOAT
+    getName() STRING
+    getAllergens() STRING
+    getDescription() STRING
+    getPrice() FLOAT
+    addAllergens(STRING) VOID
+    addDescription(STRING) VOID
+    addPrice(FLOAT) VOID
+
+
+}
+
+Restaurant --{Menu
+Menu --{Item
+
+@enduml
